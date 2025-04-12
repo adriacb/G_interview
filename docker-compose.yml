@@ -1,0 +1,29 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - vector_store:/app/vector_store
+    env_file:
+      - .env
+    environment:
+      - PYTHONPATH=/app
+
+  # This service runs langgraph CLI commands
+  langgraph_cli:
+    build: .
+    ports:
+      - "2024:2024"
+    volumes:
+      - vector_store:/app/vector_store
+    env_file:
+      - .env
+    environment:
+      - PYTHONPATH=/app
+      - LANGGRAPH_STUDIO_URL=http://localhost:2024
+    command: ["uv", "run", "langgraph", "dev", "--host", "0.0.0.0", "--port", "2024", "--allow-blocking"]
+
+volumes:
+  vector_store:
+    name: vector_store

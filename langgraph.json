@@ -1,0 +1,12 @@
+{
+    "dockerfile_lines": [],
+    "graphs": {
+        "agent": "./src/adriacb_galtea/api/services/graph_service.py:graph"
+    },
+    "env": ".env",
+    "python_version": "3.12",
+    "dependencies": [
+        "./src",
+        "."
+    ]
+}

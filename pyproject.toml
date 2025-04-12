@@ -1,0 +1,27 @@
+[project]
+name = "adriacb_galtea"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb>=0.6.3",
+    "docling>=2.28.4",
+    "fastapi>=0.115.12",
+    "ipykernel>=6.29.5",
+    "langchain>=0.3.23",
+    "langchain-chroma>=0.2.2",
+    "langchain-community>=0.3.21",
+    "langchain-core>=0.3.51",
+    "langchain-openai>=0.3.12",
+    "langfuse>=2.60.2",
+    "langgraph>=0.3.27",
+    "langgraph-cli[inmem]>=0.2.3",
+    "pydantic>=2.11.3",
+    "pydantic-settings>=2.8.1",
+    "python-dotenv>=1.1.0",
+    "python-multipart>=0.0.20",
+    "structlog>=25.2.0",
+    "tqdm>=4.67.1",
+    "uvicorn>=0.34.0",
+]
